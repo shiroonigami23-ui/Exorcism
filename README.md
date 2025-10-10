@@ -1,6 +1,4 @@
-**Please note: This repo is an internal repo. That means the source code is public, but we do not accept Pull Requests, we do not support the app being run locally, and we do not encourage people to fork or reuse this repository.**
 
----
 
 # Exercism
 
@@ -155,17 +153,10 @@ The tests can be run using:
 bundle exec rails test
 ```
 
-### Running Jest tests
 
-##### Run tests:
-
-```
-yarn test [path/to/file]
-```
 
 > Omit path to run all tests
-
-##### Update snapshots:
+ Update snapshots:
 
 ```
 yarn test [path/to/file] -- -u
@@ -173,30 +164,3 @@ yarn test [path/to/file] -- -u
 
 > Omit path to update all snapshots
 
-### Git Repos
-
-If you need to create a new Git repo for use in the tests, use the following:
-
-```
-mkdir /Users/iHiD/Code/exercism/website/test/repos/new-repo
-cd /Users/iHiD/Code/exercism/website/test/repos/new-repo
-git init --bare
-
-cd ~
-git clone file:///Users/iHiD/Code/exercism/website/test/repos/new-repo exercism-new-git-repo
-cd exercism-new-git-repo
-echo "{}" > config.json
-git add config.json
-git commit -m "First commit"
-git push origin head
-```
-
-## Solargraph
-
-Solargraph allows for code suggestions to appear in your editor.
-
-If you'd like to use solargraph, the gem is in the file.
-You need to run and set `solargraph.useBundler` to `true` in your config. I have this working well with coc-solargraph. [This article](http://blog.jamesnewton.com/setting-up-coc-nvim-for-ruby-development) was helpful for setting it up.
-
-- `bundle exec yard gems`
-- `solargraph bundle`
